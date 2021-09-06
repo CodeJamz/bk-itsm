@@ -90,9 +90,9 @@ INSTALLED_APPS += (
 USE_IAM = True if os.getenv("USE_IAM", "true").lower() == "true" else False
 if USE_IAM:
     INSTALLED_APPS += (
-        "iam",
-        "iam.contrib.iam_migration",
-        "itsm.auth_iam",
+        # "iam",
+        # "iam.contrib.iam_migration",
+        # "itsm.auth_iam",
     )
 
 # 这里是默认的中间件，大部分情况下，不需要改动
