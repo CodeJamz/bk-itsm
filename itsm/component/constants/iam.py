@@ -542,3 +542,4 @@ PLATFORM_PERMISSION = ['project_create', 'notification_view', "notification_mana
                        "platform_manage_access"]
 
 IAM_SEARCH_INSTANCE_CACHE_TIME = 10 * 60  # 缓存5分钟
+
