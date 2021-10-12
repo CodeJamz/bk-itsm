@@ -57,13 +57,7 @@ __all__ = [
 ]
 
 # app 基本信息
-# V3判断环境的环境变量为BKPAAS_ENVIRONMENT
-if "BKPAAS_ENVIRONMENT" in os.environ:
-    ENVIRONMENT = os.getenv("BKPAAS_ENVIRONMENT", "dev")
-# V2判断环境的环境变量为BK_ENV
-else:
-    PAAS_V2_ENVIRONMENT = os.environ.get("BK_ENV", "development")
-    ENVIRONMENT = {"development": "dev", "testing": "stag", "production": "prod"}.get(PAAS_V2_ENVIRONMENT)
+
 # SaaS运行版本，如非必要请勿修改
 RUN_VER = "open"
 # SaaS应用ID
