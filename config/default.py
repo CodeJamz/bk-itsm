@@ -41,8 +41,8 @@ SITE_URL_SOPS = '/o/bk_sops/'
 
 # 针对 paas_v3 容器化差异化配置
 ENGINE_REGION = os.environ.get("BKPAAS_ENGINE_REGION", "open")
-env_settings = importlib.import_module("adapter.config.sites.%s.env" % "v3")
 if ENGINE_REGION == "default":
+    env_settings = importlib.import_module('adapter.config.sites.%s.env' % "v3")
     for _setting in dir(env_settings):
         if _setting.upper() == _setting:
             locals()[_setting] = getattr(env_settings, _setting)

@@ -102,10 +102,8 @@ BK_IAM_RESOURCE_API_HOST = os.getenv(
 )
 
 ENGINE_REGION = os.environ.get("BKPAAS_ENGINE_REGION", "open")
-default_settings = importlib.import_module(
-    "adapter.config.sites.%s.ver_settings" % "v3"
-)
 if ENGINE_REGION == "default":
+    default_settings = importlib.import_module('adapter.config.sites.%s.ver_settings' % "v3")
     for _setting in dir(default_settings):
         if _setting.upper() == _setting:
             locals()[_setting] = getattr(default_settings, _setting)
