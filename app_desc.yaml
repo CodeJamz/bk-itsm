@@ -47,3 +47,6 @@ modules:
                 command: python manage.py celery worker -P gevent -n gevent@%h -c 4 -l info --maxtasksperchild=100
                 plan: 4C2G5R
                 replicas: 5
+        svc_discovery:
+            bk_saas:
+                -   bk_app_code: "bk_itsm"

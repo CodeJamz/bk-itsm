@@ -13,6 +13,7 @@ specific language governing permissions and limitations under the License.
 
 import os
 
+from adapter.config.sites.v3.utils import get_bk_itsm_host
 from adapter.utils.storage import RepoStorage
 
 DATABASES = {
@@ -36,3 +37,5 @@ STORE = RepoStorage()
 
 # 企业微信发送，默认weixin，可配置为企业微信rtx
 QY_WEIXIN = os.environ.get("BKAPP_WEIXIN_TYPE", "weixin")
+
+BK_IAM_RESOURCE_API_HOST = get_bk_itsm_host()
