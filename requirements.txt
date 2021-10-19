@@ -79,7 +79,7 @@ pycrypto==2.6.1
 raven==6.1.0
 ddtrace==0.14.1
 gunicorn==19.6.0
-bkstorages
+bkstorages==1.0.1
 pytz==2019.3
 suds-jurko==0.6
 mysqlclient==1.4.4
