@@ -615,7 +615,10 @@ CLOSE_NOTIFY = os.environ.get("BKAPP_CLOSE_NOTIFY", None)
 BK_CC_HOST = os.environ.get("BK_CC_HOST", "#")
 BK_JOB_HOST = os.environ.get("BK_JOB_HOST", "#")
 
-BK_USER_MANAGE_HOST = os.environ.get("BK_USER_MANAGE_HOST", BK_PAAS_HOST)
+# 适配容器化
+USER_MANGE_HOST = os.environ.get("BK_COMPONENT_API_URL", BK_PAAS_HOST)
+
+BK_USER_MANAGE_HOST = os.environ.get("BK_USER_MANAGE_HOST", USER_MANGE_HOST)
 
 BK_USER_MANAGE_WEIXIN_HOST = os.environ.get("BK_USER_MANAGE_WEIXIN_HOST", BK_PAAS_HOST)
 
