@@ -36,6 +36,9 @@ from config import (
     BK_PAAS_INNER_HOST,
 )
 
+# 标准运维页面服务地址
+SITE_URL_SOPS = '/o/bk_sops/'
+
 # 针对 paas_v3 容器化差异化配置
 ENGINE_REGION = os.environ.get("BKPAAS_ENGINE_REGION", "open")
 env_settings = importlib.import_module("adapter.config.sites.%s.env" % "v3")
@@ -43,6 +46,7 @@ if ENGINE_REGION == "default":
     for _setting in dir(env_settings):
         if _setting.upper() == _setting:
             locals()[_setting] = getattr(env_settings, _setting)
+    SITE_URL_SOPS = "/bk--sops/"
 
 # 请在这里加入你的自定义 APP
 INSTALLED_APPS += (
@@ -676,22 +680,19 @@ PROFILER = {
 # The name of the class to use to run the test suite
 TEST_RUNNER = "itsm.tests.runner.ItsmTestRunner"
 
-# 标准运维页面服务地址
-SITE_URL_SOPS = "/o/bk_sops/"
-
 # 统一转发前缀
 PREFIX_SOPS = ""
 
 # 设置被代理的标准运维插件AJAX请求地址，比如API网关的接口
 # 'https://paasee-dev.XX.com/t/bk_sops/apigw/dispatch_plugin_query/'
 SOPS_PROXY_URL = os.environ.get(
-    "BKAPP_SOPS_PROXY_URL", "{}/o/bk_sops/".format(BK_PAAS_INNER_HOST)
+    'BKAPP_SOPS_PROXY_URL', '{}{}'.format(BK_PAAS_INNER_HOST, SITE_URL_SOPS)
 )
 
 # 设置被代理的标准运维插件静态资源地址，比如标准运维的site_url或API网关接口
 # 'https://paasee-dev.XX.com/t/bk_sops'
 SOPS_SITE_URL = os.environ.get(
-    "BKAPP_SOPS_SITE_URL", "{}/o/bk_sops/".format(BK_PAAS_HOST)
+    'BKAPP_SOPS_SITE_URL', '{}{}'.format(BK_PAAS_HOST, SITE_URL_SOPS)
 )
 
 # 允许转发的非静态内容路径
