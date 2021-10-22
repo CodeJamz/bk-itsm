@@ -2,12 +2,12 @@ spec_version: 2
 app_version: "1.0"
 app:
     region: default
-    bk_app_code: bk_itsm
-    bk_app_name: 流程服务
+    bk_app_code: itsm
+    bk_app_name: 流程服务(测试)
     market:
         category: 运维工具
-        introduction: 流程服务
-        description: 【流程服务】是蓝鲸推出的轻量级ITSM，通过可自定义设计的流程模块，覆盖IT服务中的不同管理活动或应用场景。帮助企业用户规范内部管理流程，提升沟通及管理效率。
+        introduction: 流程服务(测试)
+        description: 【流程服务(测试)】是蓝鲸推出的轻量级ITSM，通过可自定义设计的流程模块，覆盖IT服务中的不同管理活动或应用场景。帮助企业用户规范内部管理流程，提升沟通及管理效率。
         display_options:
             width: 1280
             height: 720
@@ -49,4 +49,4 @@ modules:
                 replicas: 5
         svc_discovery:
             bk_saas:
-                -   bk_app_code: "bk_itsm"
+                -   bk_app_code: "itsm"
