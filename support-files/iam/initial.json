@@ -1,15 +1,15 @@
 {
-    "system_id": "bk_itsm",
+    "system_id": "itsm",
     "operations": [
          {
             "operation": "upsert_system",
             "data": {
-                "id": "bk_itsm",
+                "id": "itsm",
                 "name": "流程服务",
                 "name_en": "ITSM",
                 "description": "",
                 "description_en": "",
-                "clients": "bk_itsm",
+                "clients": "itsm",
                 "provider_config": {
                     "host": "",
                     "auth": "basic"
@@ -56,7 +56,7 @@
                 "description_en": "",
                 "parents": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ],
@@ -76,7 +76,7 @@
                 "description_en": "",
                 "parents": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ],
@@ -96,7 +96,7 @@
                 "description_en": "",
                 "parents": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ],
@@ -116,7 +116,7 @@
                 "description_en": "",
                 "parents": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ],
@@ -136,7 +136,7 @@
                 "description_en": "",
                 "parents": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ],
@@ -214,7 +214,7 @@
                 "name_en": "Project",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ]
@@ -228,11 +228,11 @@
                 "name_en": "Service List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     },
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "service"
                     }
                 ]
@@ -246,11 +246,11 @@
                 "name_en": "Workflow List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     },
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "workflow"
                     }
                 ]
@@ -264,11 +264,11 @@
                 "name_en": "Workflow Version List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     },
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "flow_version"
                     }
                 ]
@@ -282,11 +282,11 @@
                 "name_en": "Project and Common Flow",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     },
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "role"
                     }
                 ]
@@ -316,11 +316,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -340,11 +340,11 @@
                 "type": "edit",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -364,11 +364,11 @@
                 "type": "create",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -388,11 +388,11 @@
                 "type": "manage",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "service",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "service_list"
                             }
                         ]
@@ -412,11 +412,11 @@
                 "type": "manage",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -436,11 +436,11 @@
                 "type": "create",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -460,11 +460,11 @@
                 "type": "manage",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "workflow",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "workflow_list"
                             }
                         ]
@@ -484,11 +484,11 @@
                 "type": "create",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "workflow",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "workflow_list"
                             }
                         ]
@@ -508,11 +508,11 @@
                 "type": "create",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "flow_version",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "flow_version_list"
                             }
                         ]
@@ -532,11 +532,11 @@
                 "type": "manage",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "flow_version",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "flow_version_list"
                             }
                         ]
@@ -556,11 +556,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -580,11 +580,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -604,11 +604,11 @@
                 "type": "create",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -628,11 +628,11 @@
                 "type": "delete",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "role",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "role_list"
                             }
                         ]
@@ -652,11 +652,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "service",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "service_list"
                             }
                         ]
@@ -701,7 +701,7 @@
                 "description_en": "",
                 "parents": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ],
@@ -722,11 +722,11 @@
                 "type": "manage",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -743,11 +743,11 @@
                 "name_en": "Field List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     },
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "field"
                     }
                 ]
@@ -764,11 +764,11 @@
                 "type": "create",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -788,11 +788,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "field",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "field_list"
                             }
                         ]
@@ -812,11 +812,11 @@
                 "type": "edit",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "field",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "field_list"
                             }
                         ]
@@ -836,11 +836,11 @@
                 "type": "delete",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "field",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "field_list"
                             }
                         ]
@@ -859,7 +859,7 @@
                 "description_en": "",
                 "parents": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ],
@@ -877,11 +877,11 @@
                 "name_en": "Trigger List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     },
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "trigger"
                     }
                 ]
@@ -898,11 +898,11 @@
                 "type": "create",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -922,11 +922,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "trigger",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "trigger_list"
                             }
                         ]
@@ -946,11 +946,11 @@
                 "type": "manage",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "trigger",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "trigger_list"
                             }
                         ]
@@ -970,11 +970,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -994,11 +994,11 @@
                 "type": "manage",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -1017,7 +1017,7 @@
                 "description_en": "",
                 "parents": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ],
@@ -1038,11 +1038,11 @@
                 "type": "create",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -1062,11 +1062,11 @@
                 "type": "edit",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -1086,11 +1086,11 @@
                 "type": "delete",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -1109,7 +1109,7 @@
                 "description_en": "",
                 "parents": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ],
@@ -1127,11 +1127,11 @@
                 "name_en": "User Group List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     },
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "user_group"
                     }
                 ]
@@ -1148,11 +1148,11 @@
                 "type": "create",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -1172,11 +1172,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "user_group",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "user_group_list"
                             }
                         ]
@@ -1196,11 +1196,11 @@
                 "type": "edit",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "user_group",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "user_group_list"
                             }
                         ]
@@ -1220,11 +1220,11 @@
                 "type": "delete",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "user_group",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "user_group_list"
                             }
                         ]
@@ -1244,11 +1244,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "service",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "service_list"
                             }
                         ]
@@ -1267,7 +1267,7 @@
                 "description_en": "",
                 "parents": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ],
@@ -1287,7 +1287,7 @@
                 "description_en": "",
                 "parents": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     }
                 ],
@@ -1305,11 +1305,11 @@
                 "name_en": "Sla Agreement List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     },
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "sla_agreement"
                     }
                 ]
@@ -1323,11 +1323,11 @@
                 "name_en": "Sla Calendar List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project"
                     },
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "sla_calendar"
                     }
                 ]
@@ -1344,11 +1344,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "sla_calendar",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "sla_calendar_list"
                             }
                         ]
@@ -1368,11 +1368,11 @@
                 "type": "create",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -1392,11 +1392,11 @@
                 "type": "edit",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "sla_calendar",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "sla_calendar_list"
                             }
                         ]
@@ -1416,11 +1416,11 @@
                 "type": "delete",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "sla_calendar",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "sla_calendar_list"
                             }
                         ]
@@ -1440,11 +1440,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "sla_agreement",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "sla_agreement_list"
                             }
                         ]
@@ -1464,11 +1464,11 @@
                 "type": "create",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "project",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "project_list"
                             }
                         ]
@@ -1488,11 +1488,11 @@
                 "type": "edit",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "sla_agreement",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "sla_agreement_list"
                             }
                         ]
@@ -1512,11 +1512,11 @@
                 "type": "delete",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "sla_agreement",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "sla_agreement_list"
                             }
                         ]
@@ -1574,7 +1574,7 @@
                 "name_en": "Public Field List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "public_field"
                     }
                 ]
@@ -1591,11 +1591,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "public_field",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "public_field_list"
                             }
                         ]
@@ -1615,11 +1615,11 @@
                 "type": "edit",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "public_field",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "public_field_list"
                             }
                         ]
@@ -1639,11 +1639,11 @@
                 "type": "delete",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "public_field",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "public_field_list"
                             }
                         ]
@@ -1740,7 +1740,7 @@
                 "name_en": "Service Type List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "service_type"
                     }
                 ]
@@ -1795,7 +1795,7 @@
                 "name_en": "Task Template List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "task_template"
                     }
                 ]
@@ -1812,11 +1812,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "task_template",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "task_template_list"
                             }
                         ]
@@ -1836,11 +1836,11 @@
                 "type": "manage",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "task_template",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "task_template_list"
                             }
                         ]
@@ -1885,7 +1885,7 @@
                 "name_en": "Public API List",
                 "resource_type_chain": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "public_api"
                     }
                 ]
@@ -1915,11 +1915,11 @@
                 "type": "view",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "public_api",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "public_api_list"
                             }
                         ]
@@ -1939,11 +1939,11 @@
                 "type": "manage",
                 "related_resource_types": [
                     {
-                        "system_id": "bk_itsm",
+                        "system_id": "itsm",
                         "id": "public_api",
                         "related_instance_selections": [
                             {
-                                "system_id": "bk_itsm",
+                                "system_id": "itsm",
                                 "id": "public_api_list"
                             }
                         ]
