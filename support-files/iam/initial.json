@@ -5,8 +5,8 @@
             "operation": "upsert_system",
             "data": {
                 "id": "itsm",
-                "name": "流程服务",
-                "name_en": "ITSM",
+                "name": "流程服务(测试)",
+                "name_en": "ITSM(TEST)",
                 "description": "",
                 "description_en": "",
                 "clients": "itsm",
