@@ -71,7 +71,7 @@ if ALLOW_CSRF:
     MIDDLEWARE = ("common.middlewares.DisableCSRFCheck",) + MIDDLEWARE
 
 MEDIA_URL = "%smedia/" % SITE_URL
-BK_STATIC_URL = "/static"
+# BK_STATIC_URL = "/static"
 
 # REMOTE_STATIC_URL = "http://127.0.0.1:8000/static/"
 # STATIC_URL = "http://127.0.0.1:8000/static/"
