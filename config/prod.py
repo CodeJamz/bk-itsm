@@ -32,8 +32,10 @@ from config import RUN_VER, BK_PAAS_HOST, OPEN_VER  # noqa
 
 if RUN_VER == "open":
     from blueapps.patch.settings_open_saas import *  # noqa
+    BK_STATIC_URL = STATIC_URL.rstrip('/')
 else:
     from blueapps.patch.settings_paas_services import *  # noqa
+    BK_STATIC_URL = "/static"
 
 # 正式环境
 RUN_MODE = "PRODUCT"
@@ -88,7 +90,6 @@ REST_FRAMEWORK.update(
 )
 
 MEDIA_URL = "%smedia/" % SITE_URL
-BK_STATIC_URL = "/o/bk_itsm/static"
 # ==============================================================================
 # 加载环境差异化配置
 # ==============================================================================

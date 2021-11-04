@@ -30,8 +30,10 @@ from config import RUN_VER, BK_PAAS_HOST, OPEN_VER  # noqa
 
 if RUN_VER == "open":
     from blueapps.patch.settings_open_saas import *  # noqa
+    BK_STATIC_URL = STATIC_URL.rstrip('/')
 else:
     from blueapps.patch.settings_paas_services import *  # noqa
+    BK_STATIC_URL = "/static"
 
 # 预发布环境
 RUN_MODE = "STAGING"
@@ -71,7 +73,6 @@ if ALLOW_CSRF:
     MIDDLEWARE = ("common.middlewares.DisableCSRFCheck",) + MIDDLEWARE
 
 MEDIA_URL = "%smedia/" % SITE_URL
-BK_STATIC_URL = "/t/bk_itsm/static"
 CSRF_COOKIE_NAME = "bkitsm_csrftoken"
 
 
