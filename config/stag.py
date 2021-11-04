@@ -72,6 +72,8 @@ if ALLOW_CSRF:
 
 MEDIA_URL = "%smedia/" % SITE_URL
 BK_STATIC_URL = "/t/bk_itsm/static"
+CSRF_COOKIE_NAME = "bkitsm_csrftoken"
+
 
 # REMOTE_STATIC_URL = "http://127.0.0.1:8000/static/"
 # STATIC_URL = "http://127.0.0.1:8000/static/"
