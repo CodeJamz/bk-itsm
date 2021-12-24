@@ -41,6 +41,7 @@ else
   TEST_SUCCESS=$(printf "%d" $((TEST_COUNT-TEST_FAILURE-TEST_ERROR)))
 fi
 
+echo "测试报告\n"
 echo "测试时长: $TEST_TIME"
 echo "单元测试数: $TEST_COUNT"
 echo "成功数: $TEST_SUCCESS"
