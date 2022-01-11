@@ -84,6 +84,7 @@ anyjson==0.3.3
 #bkouth
 PyJWT==1.6.1
 cryptography==3.3.2
+bkoauth==0.0.25
 
 # prometheus
 django-prometheus==2.1.0
