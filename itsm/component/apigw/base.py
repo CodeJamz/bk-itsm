@@ -26,6 +26,7 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 import logging
 
 import requests
+from django.conf import settings
 from requests.exceptions import HTTPError, ReadTimeout
 from itsm.component.exceptions import RemoteCallError
 
@@ -72,19 +73,24 @@ class APIResource:
         self.session = requests.session()
         self.user = ""
 
-    def __call__(self, request_data):
+    def __call__(self, request_data, request):
         self.user = request_data.pop("username")
+        self.request = request
         return self.perform_request(request_data)
 
     @property
     def access_token(self):
 
         try:
-            import bkoauth
-
-            # 新的access_token，会自动根据refresh_token刷新
-            access_token_obj = bkoauth.get_access_token_by_user(self.user)
-            access_token = access_token_obj.access_token
+            if settings.RUN_VER == "ieod":
+                import bkoauth
+                # 新的access_token，会自动根据refresh_token刷新
+                access_token_obj = bkoauth.get_access_token_by_user(self.user)
+                access_token = access_token_obj.access_token
+            else:
+                from bkoauth.client import oauth_client
+                access_token_data = oauth_client._get_access_token_data(self.request)
+                access_token = access_token_data.get("access_token")
         except Exception:
             logger.exception(u"根据user（%s）获取access_token失败，请检查 bkoauth 配置" % self.user)
             # raise Exception(u"根据user（%s）获取access_token失败，请检查 bkoauth 配置" % self.user)

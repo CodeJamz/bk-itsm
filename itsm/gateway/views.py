@@ -439,7 +439,7 @@ def get_sops_preview_common_task_tree(request):
 def get_user_pipeline_list(request):
     try:
         res = apigw_client.devops.project_pipeline_list(
-            {"project_id": request.GET["project_id"], "username": request.user.username}
+            {"project_id": request.GET["project_id"], "username": request.user.username}, request
         )
         return Success(res).json()
     except RemoteCallError as e:
@@ -448,7 +448,7 @@ def get_user_pipeline_list(request):
 
 def get_user_projects(request):
     try:
-        res = apigw_client.devops.projects_list({"username": request.user.username})
+        res = apigw_client.devops.projects_list({"username": request.user.username}, request)
         return Success(res).json()
     except RemoteCallError as e:
         return Fail(str(e), "DEVOPS.GET_UESR_PROJECTS").json()
@@ -463,7 +463,8 @@ def get_pipeline_build_list(request):
                 "pipeline_id": request.GET["pipeline_id"],
                 "page": request.GET["page"],
                 "pageSize": request.GET["page_size"],
-            }
+            },
+            request
         )
         return Success(res).json()
     except RemoteCallError as e:
@@ -478,7 +479,8 @@ def get_pipeline_build_start_info(request):
                 "username": request.user.username,
                 "project_id": request.GET["project_id"],
                 "pipeline_id": request.GET["pipeline_id"],
-            }
+            },
+            request
         )
         return Success(res).json()
     except RemoteCallError as e:
@@ -493,7 +495,8 @@ def get_user_pipeline_detail(request):
                 "username": request.user.username,
                 "project_id": request.GET["project_id"],
                 "pipeline_id": request.GET["pipeline_id"],
-            }
+            },
+            request
         )
         return Success(res).json()
     except RemoteCallError as e:
@@ -513,7 +516,7 @@ def start_user_pipeline(request):
         #     "BRANCH": "no_redis_iam_branch",
         #     "RELEASE": "no",
         # }
-        res = apigw_client.devops.pipeline_build_start(request.POST)
+        res = apigw_client.devops.pipeline_build_start(request.POST, request)
         return Success(res).json()
     except RemoteCallError as e:
         return Fail(str(e), "DEVOPS.START_USER_PIPELINE").json()
@@ -528,7 +531,8 @@ def get_user_pipeline_build_status(request):
                 "project_id": request.GET["project_id"],
                 "pipeline_id": request.GET["pipeline_id"],
                 "build_id": request.GET["build_id"],
-            }
+            },
+            request
         )
         return Success(res).json()
     except RemoteCallError as e:
@@ -544,7 +548,8 @@ def get_user_pipeline_build_detail(request):
                 "project_id": request.GET["project_id"],
                 "pipeline_id": request.GET["pipeline_id"],
                 "build_id": request.GET["build_id"],
-            }
+            },
+            request
         )
         return Success(res).json()
     except RemoteCallError as e:
@@ -560,7 +565,8 @@ def get_pipeline_build_artifactory(request):
                 "project_id": request.GET["project_id"],
                 "pipeline_id": request.GET["pipeline_id"],
                 "build_id": request.GET["build_id"],
-            }
+            },
+            request
         )
         return Success(res).json()
     except RemoteCallError as e:
@@ -576,7 +582,8 @@ def get_pipeline_build_artifactory_download_url(request):
                 "project_id": request.GET["project_id"],
                 "artifactoryType": request.GET["artifactory_type"],
                 "path": request.GET["path"],
-            }
+            },
+            request
         )
         return Success(res).json()
     except RemoteCallError as e:

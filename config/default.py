@@ -22,6 +22,7 @@ NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
+import ast
 import importlib
 from urllib.parse import urljoin
 
@@ -29,6 +30,7 @@ from blueapps.conf.default_settings import *  # noqa
 from blueapps.conf.log import get_logging_config_dict
 from config import (
     APP_CODE,
+    SECRET_KEY,
     BASE_DIR,
     BK_URL,
     PROJECT_ROOT,
@@ -836,3 +838,21 @@ CONTENT_CREATOR_WITH_TRANSLATION = (
 
 # 系统api调用账户
 SYSTEM_USE_API_ACCOUNT = "admin"
+
+# BKAUTH
+BKAUTH_TOKEN_APP_CODE = (
+    os.environ.get("BKAUTH_TOKEN_APP_CODE")
+    if os.environ.get("BKAUTH_TOKEN_APP_CODE", "")
+    else APP_CODE
+)
+BKAUTH_TOKEN_SECRET_KEY = (
+    os.environ.get("BKAUTH_TOKEN_SECRET_KEY")
+    if os.environ.get("BKAUTH_TOKEN_SECRET_KEY", "")
+    else SECRET_KEY
+)
+
+OAUTH_NEED_NEW_TOKEN = os.environ.get("OAUTH_NEED_NEW_TOKEN", True)
+OAUTH_API_URL = os.environ.get("OAUTH_API_URL", "")
+OAUTH_COOKIES_PARAMS = os.environ.get("OAUTH_COOKIES_PARAMS", {})
+if OAUTH_COOKIES_PARAMS:
+    OAUTH_COOKIES_PARAMS = ast.literal_eval(OAUTH_COOKIES_PARAMS)
