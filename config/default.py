@@ -22,7 +22,7 @@ NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES
 WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 """
-
+import ast
 from urllib.parse import urljoin
 
 from blueapps.conf.default_settings import *  # noqa
@@ -835,8 +835,6 @@ BKAUTH_TOKEN_SECRET_KEY = (
 )
 
 OAUTH_API_URL = os.environ.get("OAUTH_API_URL", "")
-OAUTH_COOKIES_PARAMS = {
-    "rtx": "bk_uid",
-    "bk_ticket": "bk_ticket",
-    "oa_ticket": "ticket",
-}
+OAUTH_COOKIES_PARAMS = os.environ.get("OAUTH_COOKIES_PARAMS", {})
+if OAUTH_COOKIES_PARAMS:
+    OAUTH_COOKIES_PARAMS = ast.literal_eval(OAUTH_COOKIES_PARAMS)
